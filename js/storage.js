@@ -1,7 +1,7 @@
 (function(window) {
   'use strict';
 
-  function store(){
+  function store(name){
     this._cont = 'JsPractice-VSTDL';
 
     if (!localStorage[this._cont]) {
@@ -17,7 +17,6 @@
       var db = JSON.parse(localStorage[this._cont]);
       var data = db.TDL;
 
-      //item.id = date.now();
       data.push(item);
       localStorage[this._cont] = JSON.stringify(db);
     }
