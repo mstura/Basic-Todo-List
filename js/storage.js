@@ -2,7 +2,7 @@
   'use strict';
 
   function store(name){
-    this._cont = 'JsPractice-VSTDL';
+    this._cont = name;
 
     if (!localStorage[this._cont]) {
       var data = {

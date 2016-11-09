@@ -1,14 +1,14 @@
 (function (){
     'use strict'
   var app = {};
-  app.storage = new store();
+  app.storage = new store('JsPractice-VSTDL');
   app.$ = new $h();
   app.listeners = new listeners();
 
 function listeners(){
   app.$.ael('click', ButtonIdentifier,app.$.listElements);
-  app.$.ael('DOMContentLoaded',readSaved,document);
-  app.$.ael('keypress',ButtonIdentifier,app.$._input);
+  app.$.ael('load',readSaved,window);
+  app.$.ael('keypress',ButtonIdentifier,window);
 }
 function ButtonIdentifier (e){
   if (e.keyCode !== 13) {
